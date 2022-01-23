@@ -11,7 +11,7 @@ first_names = ["Samuel","Jack","Joseph","Harry","Alfie","Jacob","Thomas","Charli
 family_names = ["Williams","Peters","Gibson","Martin","Jordan","Jackson","Grant","Davis","Collins","Bradley","Barlow"]
 
 # Instantiate Chrome Browser Command
-driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe")
+driver = webdriver.Chrome(executable_path=r"C:\\chromedriver.exe")
 # Open the provided URL
 driver.get("https://staging.app.timelines.ai/accounts/login/?next=/")
 #elem = driver.find_element_by_name("email")
