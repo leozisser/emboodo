@@ -2,10 +2,24 @@
 from selenium import webdriver
 import pandas as pd
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 import numpy as np
 from bs4 import BeautifulSoup
+import os
+import time
 
 
+# options = Options()
+# options.add_argument('--disable-logging')
+# options.add_argument('--incognito')
+# options.add_argument('--disable-infobars')
+# options.add_argument("--disable-gpu")
+# options.add_argument("--window-size=1300,800")
+# options.add_argument("--disable-dev-shm-usage")
+# #options.add_argument("--headless")
+# #options.add_argument("--host-resolver-rules=MAP www.google-analytics.com 127.0.0.1")
+# options.add_argument("no-default-browser-check")
+# options.add_argument("no-first-run")
 
 url = 'https://datarade.ai/data-providers/'
 profile = '/profile'
@@ -18,7 +32,7 @@ classname_usecase = "tag-label tag-label--blue"
 xlpath = '/Users/leo_z/Downloads/Data-Hunters Data Providers Connections.xlsx'
 data_providers = pd.read_excel(xlpath,sheet_name=0).fillna('').dropna()
 # data_providers = data_providers.dropna(subset=data_providers.columns)
-print(data_providers.head(10))
+# print(data_providers.head(10))
 data_categories = pd.read_excel(xlpath,sheet_name=1).fillna('')
 use_cases = pd.read_excel(xlpath,sheet_name=2).fillna('')
 
@@ -57,6 +71,9 @@ cases = map_use_cases(use_cases)
 chrome_options = webdriver.ChromeOptions()
 prefs = {"profile.managed_default_content_settings.images": 2}
 chrome_options.add_experimental_option("prefs", prefs)
+chrome_options.add_argument('--disable-logging')
+chrome_options.add_argument('--incognito')
+chrome_options.add_argument('--disable-infobars')
 driver = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver')
 driver2 = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver',chrome_options=chrome_options)
 
@@ -82,10 +99,18 @@ def get_related_data_providers(driver, provider):
 def table_row(row):
     name = row['post_title']
     name = name.lower().replace(' ','-')
-    print('provider')
+    descr = row['post_content'].replace('\n','').replace('\r','')
+    descr2 = row['post_excerpt'].replace('\n','').replace('\r','')
+    row['post_content'] = descr
+    row['post_excerpt'] = descr2
+    print('provider ', name)
     profile_url = url + str(name)+ profile
     driver.get(profile_url)
     s = driver.page_source
+    text_of_ban = driver.find_element("xpath","/html/body")
+    if text_of_ban.text =="Too many requests in a given amount of time. We employ rate limiting to ensure the stability of our services to all users. If you think this is a mistake, contact us at platform@datarade.ai":
+        raise ValueError('banned, switch to a different VPN')
+
     soup = BeautifulSoup(s, features="html.parser")
     try:
         data_cat_list = get_data_cat_list(soup)
@@ -95,6 +120,7 @@ def table_row(row):
         usecase_list = get_usecase_list(soup)
     except:
         usecase_list = ['no data']
+    time.sleep(1)
     try: 
         related_list = get_related_data_providers(driver2, name)
     except:
@@ -105,26 +131,41 @@ def table_row(row):
     return row
 
 
-def handle_providers_table(df):
+def handle_providers_table(df, batch_size, start):
     cnt = 0
     df = df.dropna()
-    print(df.head(15))
+    # print(df.head(15))
     df_new = pd.DataFrame(columns=df.columns)
     df_list = []
-    for num,i in df.head(15).iterrows():
+    for num,i in df.iloc[start:start+batch_size].iterrows():
         cnt +=1
         new_row = table_row(i)
-        print('NEWROW')
-        print(new_row)
+        # print('NEWROW')
+        # print(new_row)
         df_list.append(new_row)
     df_new = pd.DataFrame(df_list)
-    print(df_new)
-    print('DFNEW')
-    print('CNT',cnt)
+    # print(df_new)
+    # print('DFNEW')
+    # print('CNT',cnt)
     return df_new
 
+batch_size = 1
 
-df_new = handle_providers_table(data_providers)
-print(df_new.iloc[0])
-df_new.to_csv('newdf.csv')
-print('o')
+try:
+    with open("current.txt", "r") as text_file:
+        tx = text_file.read()
+        n0 = int(tx)
+except:
+        n0=0
+
+while n0<len(data_providers):
+    n0+=batch_size   
+    print(n0)
+    df_new = handle_providers_table(data_providers,batch_size,n0)
+    hdr = (n0 == 0)
+    
+    # print(df_new.iloc[0])
+    df_new.to_csv('newdf.csv',mode='a',header=hdr,index = False)
+    with open("current.txt", "w") as text_file:
+        text_file.write(str(n0))
+

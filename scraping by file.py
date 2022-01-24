@@ -79,9 +79,9 @@ while list_number<= len(list_text):
     flag_of_ready = False
     one_row.append(list_text[list_number])
     time.sleep(2)
-    #text_of_ban = driver.find_element("xpath","/html/body")
-    #print(text_of_ban.text[0:10])
-    #if text_of_ban.text !="Too many requests in a given amount of time. We employ rate limiting to ensure the stability of our services to all users. If you think this is a mistake, contact us at platform@datarade.ai":
+    # text_of_ban = driver.find_element("xpath","/html/body")
+    # print(text_of_ban.text[0:10])
+    # if text_of_ban.text !="Too many requests in a given amount of time. We employ rate limiting to ensure the stability of our services to all users. If you think this is a mistake, contact us at platform@datarade.ai":
     while flag_of_ready == False:
         
         flag_of_ready = check_exists_by_xpath(driver,"/html/body/div/div/div[3]/div[2]/div/div[1]/div/div/div[2]/div[2]/div[1]")
