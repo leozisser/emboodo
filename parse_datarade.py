@@ -31,8 +31,6 @@ classname_usecase = "tag-label tag-label--blue"
 
 xlpath = '/Users/leo_z/Downloads/Data-Hunters Data Providers Connections.xlsx'
 data_providers = pd.read_excel(xlpath,sheet_name=0).fillna('').dropna()
-# data_providers = data_providers.dropna(subset=data_providers.columns)
-# print(data_providers.head(10))
 data_categories = pd.read_excel(xlpath,sheet_name=1).fillna('')
 use_cases = pd.read_excel(xlpath,sheet_name=2).fillna('')
 
@@ -58,9 +56,9 @@ def pick_existing_entries(list, blueprint):
 def checked_for_existence(list_, d):
     new_list = []
     for i in list_:
-        if i.lower() in d.keys():
+        if i.lower() in d.keys() and d[i.lower()] not in new_list:
             new_list.append(d[i.lower()])
-        elif i.lower() in [i.lower() for i in list(d.values())]:
+        elif i.lower() in [i.lower() for i in list(d.values())] and i not in new_list:
             new_list.append(i)
     return new_list
 
@@ -98,7 +96,7 @@ def get_related_data_providers(driver, provider):
 
 def table_row(row):
     name = row['post_title']
-    name = name.lower().replace(' ','-')
+    name = name.lower().replace(' & ','-').replace(', ','-').replace(' ','-').replace('.','-').replace('\'','-').strip('-')
     descr = row['post_content'].replace('\n','').replace('\r','')
     descr2 = row['post_excerpt'].replace('\n','').replace('\r','')
     row['post_content'] = descr
@@ -151,21 +149,24 @@ def handle_providers_table(df, batch_size, start):
 
 batch_size = 1
 
-try:
-    with open("current.txt", "r") as text_file:
-        tx = text_file.read()
-        n0 = int(tx)
-except:
-        n0=0
 
-while n0<len(data_providers):
-    n0+=batch_size   
-    print(n0)
-    df_new = handle_providers_table(data_providers,batch_size,n0)
-    hdr = (n0 == 0)
-    
-    # print(df_new.iloc[0])
-    df_new.to_csv('newdf.csv',mode='a',header=hdr,index = False)
-    with open("current.txt", "w") as text_file:
-        text_file.write(str(n0))
 
+def scrape_sheet(sheet):
+    try:
+        with open("current.txt", "r") as text_file:
+            tx = text_file.read()
+            n0 = int(tx)
+    except:
+        n0=-1
+    while n0<len(sheet):
+        n0+=batch_size   
+        print(n0)
+        df_new = handle_providers_table(sheet,batch_size,n0)
+        hdr = (n0 == -1)
+        
+        # print(df_new.iloc[0])
+        df_new.to_csv('newdf.csv',mode='a',header=hdr,index = False)
+        with open("current.txt", "w") as text_file:
+            text_file.write(str(n0))
+
+scrape_sheet()
