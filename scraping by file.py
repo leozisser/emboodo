@@ -29,8 +29,7 @@ options.add_argument("--disable-dev-shm-usage")
 #options.add_argument("--host-resolver-rules=MAP www.google-analytics.com 127.0.0.1")
 options.add_argument("no-default-browser-check")
 options.add_argument("no-first-run")
-driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe", chrome_options=options
-)
+driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe", chrome_options=options)
 
 up = 0   
 def check_exists_by_xpath(driver,xpath):
