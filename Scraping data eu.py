@@ -10,16 +10,16 @@ import logging
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.remote_connection import LOGGER
 import csv
-from unidecode import unidecode
-import autoit
+# from unidecode import unidecode
+# import autoit
 import random
 import os
 from datetime import timedelta, datetime
 import time
-from statistics import mean
+# from statistics import mean
 import re
-from alive_progress import alive_bar
-from progress.bar import IncrementalBar
+# from alive_progress import alive_bar
+# from progress.bar import IncrementalBar
 LOGGER.setLevel(logging.WARNING)
 options = Options()
 #options.add_argument('--proxy-server=176.9.119.170:1080	')
@@ -262,12 +262,9 @@ while list_number<= len(list_text):
         if data_categories_check == True: 
             data_categories_elem = driver.find_element("class name","categories")
             data_categories = data_categories_elem.text
-            ##print(data_categories)
             data_categories = data_categories.strip()
             data_categories = data_categories.replace("\n","")
             data_categories = unidecode(data_categories)
-            #data_categories = re.sub("[^A-Za-z]", "", data_categories)
-            #print(data_categories)
             one_row.append(data_categories)
         else:
             one_row.append("-")
