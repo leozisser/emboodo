@@ -1,9 +1,12 @@
 import pandas as pd
 import re
 from parse_datarade import categories, cases
+from datasets_custom_description import *
 
 
 filepath = '/Users/leo_z/Downloads/Datahunters Working station - datahunter - datarade full scrape - scraping.csv'
+fp2 = '/Users/leo_z/Downloads/Datahunters Working station - removed_links.csv'
+
 
 def checked_for_existence(list_, d):
     new_list = []
@@ -12,10 +15,20 @@ def checked_for_existence(list_, d):
             new_list.append(d[i.lower()])
         elif i.lower() in [i.lower() for i in list(d.values())] and i not in new_list:
             new_list.append(i)
+    if '' in new_list:
+        new_list.remove('')
     return new_list
 
+def check_cases(st):
+    lis = st.split(',')
+    return ','.join(checked_for_existence(lis,cases))
+
+def check_cat(st):
+    lis = st.split(',')
+    return ','.join(checked_for_existence(lis, categories))
 
 def delete_links(filepath):
+    print('lol')
     df = pd.read_csv(filepath)
     df['related_data_sets']=df['related_data_sets'].str.replace(r'http\S+(?=,)', '', regex=True).replace(r' : ,',',', regex=True)
     # print(df['related_data_sets'].iloc[0])
@@ -33,9 +46,18 @@ def unique_entries(column):
     return list(set(flatten(column.tolist())))
 
 
-def form_list_of_providers(filepath):
-    columns = ['logo','data_provider','use_case','data_category']
-    df = pd.read_csv(filepath)[columns].dropna()
+def form_list_of_datasets(fp, exitname):
+    df = pd.read_csv(fp).fillna('')
+    df['use_case'] = insert_comma(df['use_case'])
+    df['use_case'] = df['use_case'].apply(check_cases)
+    df['data_category']= insert_comma(df['data_category'])
+    df['data_category'] = df['data_category'].apply(check_cat)
+    df.to_csv('results/' + exitname + '.csv', index=False)
+
+def form_list_of_providers(filepath, exit_name):
+    print('lol')
+    # columns = ['logo','data_provider','use_case','data_category']
+    df = pd.read_csv(filepath).fillna('')
     df['use_case'] = insert_comma(df['use_case'])
     df['data_category']= insert_comma(df['data_category'])
     providers = df['data_provider'].unique()
@@ -66,7 +88,7 @@ def form_list_of_providers(filepath):
         dict_new['data_category'] = ','.join(data_categories)
         newdf_list.append(dict_new)
     newdf = pd.DataFrame(newdf_list)
-    newdf.to_csv('missing_providers.csv',index=False)
+    newdf.to_csv('results/'+ exitname + '.csv', index=False)
     return 0
 
 
@@ -81,4 +103,4 @@ def form_list_of_providers(filepath):
 
 # text = re.sub(r'http\S+', '', text)
 # print(categories)
-form_list_of_providers(filepath)
+form_list_of_datasets(fp2, 'lol')
