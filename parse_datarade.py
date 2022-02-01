@@ -37,8 +37,8 @@ chrome_options.add_experimental_option("prefs", prefs)
 chrome_options.add_argument('--disable-logging')
 chrome_options.add_argument('--incognito')
 chrome_options.add_argument('--disable-infobars')
-driver = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver')
-driver2 = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver',chrome_options=chrome_options)
+# driver = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver')
+# driver2 = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver',chrome_options=chrome_options)
 
 # unknown_providers = pd.read_excel(xlpath,sheet_name=5).fillna('')
 # uk_pr = pd.merge(unknown_providers, data_providers, on = ['post_title']).drop_duplicates()
@@ -177,6 +177,7 @@ def table_row_datasets(row,driver):
 
 
 def handle_table(df, batch_size, start,mode):
+    lol()
     driver = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver')
     driver2 = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver',chrome_options=chrome_options)
     # print(df)
