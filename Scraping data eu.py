@@ -61,7 +61,7 @@ autoit.win_wait_active("Google - Google Chrome")
 f = open(r"C:\Users\Анатолий\Desktop\python\scraping data europa eu.txt")
 avg_time_for_all = []
 number = 0
-list_number = 18
+list_number = 0
 list_text = []
 for lines in f:
     list_text.append(lines)
@@ -74,7 +74,7 @@ while list_number<= len(list_text):
     number += 1
     one_row = []
     
-    print(list_text[list_number])
+    #print(list_text[list_number])
     #driver.execute_script("window.open("+"'"+(list_text[list_number])+"'"+");")
     #driver.find_element(By.linkText(list_text[list_number])).sendKeys(selectLinkOpeninNewTab)
     #driver.execute_script("window.open('"+(list_text[list_number])+"')")
@@ -88,14 +88,14 @@ while list_number<= len(list_text):
     #if text_of_ban.text !="Too many requests in a given amount of time. We employ rate limiting to ensure the stability of our services to all users. If you think this is a mistake, contact us at platform@datarade.ai":
     testing_on_404 = ""
     
-    print(list_number, " " ,check_exists(driver,"class name","container-fluid"))
-    if check_exists(driver,"class name","container-fluid") == True:
-        testing_on_404 = driver.find_element("class name","container-fluid")
+    #print(list_number, " " ,check_exists(driver,"class name","col-10"))
+    if check_exists(driver,"class name","col-10") == True:
+        testing_on_404 = driver.find_element("class name","col-10")
         testing_on_404 = testing_on_404.text
-        #print(testing_on_404.text)
-    #print(driver.find_element("class name","container-fluid ").text)
-    print("404 : ",testing_on_404)
-    if testing_on_404.find( != "Error 404": 
+        ##print(testing_on_404.text)
+    ##print(driver.find_element("class name","container-fluid ").text)
+    #print("404 : ",testing_on_404)
+    if testing_on_404.find("Error 404") == -1: 
         while flag_of_ready == False:
             
             flag_of_ready = check_exists_by_xpath(driver,"/html/body/div/div/div[3]/div[2]/div/div[1]/div/div/div[2]/div[2]/div[1]")
@@ -108,11 +108,11 @@ while list_number<= len(list_text):
             time.sleep(0.6)
             logo = driver.find_element("xpath","/html/body/div/div/div[3]/div[2]/div/div[1]/div/div/div[2]/div[2]/div[1]")
             logo = logo.find_element("tag name","img")
-            ##print(logo_src)
+            ###print(logo_src)
             logo_src = logo.get_attribute("src")
             logo_src = logo_src.strip()
             logo_src = logo_src.replace("\n","")
-            #print(logo_src[0:20])
+            ##print(logo_src[0:20])
             one_row.append(logo_src)
             ##time.sleep(10)
         else:
@@ -126,26 +126,26 @@ while list_number<= len(list_text):
             data_set_name = data_set_name.strip()
             data_set_name = data_set_name.replace("\n","")
             data_set_name = unidecode(data_set_name)
-            #print(data_set_name[0:20])
+            ##print(data_set_name[0:20])
             one_row.append(data_set_name)
         else:
             #data_set_name_elem = driver.find_element("class name","offset-lg-1")
             one_row.append("-")
         data_vendor_name_check = check_exists(driver,"xpath","/html/body/div/div/div[3]/div[2]/div/div[1]/div/div/div[2]/div[2]/div[2]/span[2]")
-        #print(data_vendor_name_check)
+        ##print(data_vendor_name_check)
         #app > div > div.site-wrapper > div.d-flex.flex-column.p-0.bg-transparent.content > div > div:nth-child(1) > div > div > div:nth-child(2) > div.row.mt-1 > div:nth-child(2)
         if data_vendor_name_check == True: 
             data_vendor_name_elem = driver.find_element("xpath","/html/body/div/div/div[3]/div[2]/div/div[1]/div/div/div[2]/div[2]/div[2]/span[2]")
             data_vendor_name = data_vendor_name_elem.text
-            #print(data_vendor_name)
+            ##print(data_vendor_name)
             #data_vendor_name = data_vendor_name.split(":")
             #data_vendor_name = data_vendor_name[1]
-            ##print(data_vendor_name)
+            ###print(data_vendor_name)
             data_vendor_name = data_vendor_name.strip()
             data_vendor_name = data_vendor_name.replace("\n","")
             data_vendor_name = unidecode(data_vendor_name)
             #data_vendor_name = re.sub("[^A-Za-z]", "", data_vendor_name)
-            #print(data_vendor_name)
+            ##print(data_vendor_name)
             one_row.append(data_vendor_name)
         else:
             one_row.append("-")
@@ -154,14 +154,14 @@ while list_number<= len(list_text):
         if description_check == True: 
             description_elem = driver.find_element("class name","markdown-content")
             description = description_elem.text
-            ##print(description)
-            ##print()
-            ##print()
+            ###print(description)
+            ###print()
+            ###print()
             description = description.strip()
             description = description.replace("\n","")
             description = unidecode(description)
             #description = re.sub("[^A-Za-z]", "", description)
-            #print(description)
+            ##print(description)
             one_row.append(description)
         else:
             one_row.append("-")
@@ -170,16 +170,18 @@ while list_number<= len(list_text):
             download_first_elem = driver.find_elements("class name","position-relative")
             i = 0
             while i <len(download_first_elem):
-                print(download_first_elem[i].text.replace("keyboard_arrow_down","").strip().lower())
-                print()
+                #print(download_first_elem[i].text.replace("keyboard_arrow_down","").strip().lower())
                 if download_first_elem[i].text.replace("keyboard_arrow_down","").strip().lower() == "download":
                     download_first_elem[i].click()
                     check_dropdownenu = check_exists(driver,"class name","dropdownMenu")
-                    print(check_dropdownenu)
+                    #print(check_dropdownenu)
                     if check_dropdownenu == True:
                         elem_dropdownenu = driver.find_element("class name","dropdownMenu")
-                        download_link = elem_dropdownenu.find_element("tag name","small")
-                        download_link.click()
+                        download_link = elem_dropdownenu.find_element("tag name","a")
+                        print("href"," " ,download_link.get_attribute('href'))
+                        download_button = elem_dropdownenu.find_element("tag name","small")
+                        download_button.click()
+                        #print("href"," " ,download_link.get_attribute('href'))
                         #px-2
                     else:
                         pass
@@ -243,9 +245,10 @@ while list_number<= len(list_text):
             one_row.append("-")
         '''
         #similar_datasets = driver.find_element("class name","nav-link")
-        time.sleep(2)
+        #time.sleep(2)
+        driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
         data_categories_upper_element = driver.find_element("class name",'menu')
-        print(type(data_categories_upper_element))
+        #print(type(data_categories_upper_element))
         time.sleep(0.5)
         flag_0 = 0
         while flag_0 == 0:
@@ -257,7 +260,7 @@ while list_number<= len(list_text):
             else:
                 flag_0 = 1
         data_categories_upper_element.find_element("xpath",'//span[contains(text(), "Categories")]').click()
-        print(1)
+        #print(1)
         data_categories_check = check_exists(driver,"class name","categories")
         if data_categories_check == True: 
             data_categories_elem = driver.find_element("class name","categories")
