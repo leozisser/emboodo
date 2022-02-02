@@ -15,12 +15,12 @@ import random
 import os
 from datetime import timedelta, datetime
 import time
-# from statistics import mean
+from statistics import mean
 import re
-from textblob import TextBlob
-from langdetect import detect
-from progress.bar import IncrementalBar
-import langid
+# from textblob import TextBlob
+# from langdetect import detect
+# from progress.bar import IncrementalBar
+# import langid
 LOGGER.setLevel(logging.WARNING)
 options = Options()
 #options.add_argument('--proxy-server=176.9.119.170:1080	')
@@ -48,29 +48,27 @@ def check_exists(driver,way,name):
         return False
     return True
 i = 0
-i_number = open(r'C:\Users\Анатолий\Desktop\python\i.txt', 'r')
+i_number = open('current.txt', 'r')
 for lines in i_number:
     i = int(lines)
 print(i)
-driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe", chrome_options=options
-)
+driver = webdriver.Chrome(executable_path=r'/Users/leo_z/Documents/GitHub/emboodo/chromedriver', chrome_options=options)
 #i = 12033 + 563 + 1130 + 500 + 966 +1087 + 81 + 5 + 10 + 13
-driver.get("https://data.europa.eu/data/datasets?locale=en&page="+str(i)+"")
+driver.get("https://catalog.data.gov/dataset?page="+str(i)+"")
 driver.maximize_window()
-f = open(r'C:\Users\Анатолий\Desktop\python\scraping data europa eu.txt', 'a')
+f = open(r'data_gov.txt', 'a')
 
 number_of_all = 0
 not_loaded = 0
 avg_time_for_all = []
 
-while int(i) < (89174):
-    
+while int(i) < (89174):  
     start_time = time.time()
     driver.delete_all_cookies()
-    check_if_page_loaded = check_exists(driver,"class name","alert")
-    time.sleep(0.2)
-    if check_if_page_loaded == True and driver.find_element("class name","alert").text.find("datasets ") != -1:
-        
+    check_if_page_loaded = check_exists(driver,"class name","root")
+    # time.sleep(0.2)
+    if check_if_page_loaded:
+        lo()
         #print(driver.find_element("class name","alert").text.find("datasets "))
         data_set_boxes = driver.find_elements("class name","data-info-box")
         
@@ -86,14 +84,14 @@ while int(i) < (89174):
             
             link = one_data_set.find_element("class name","text-dark").get_attribute("href")
             #print((langid.classify(title_text))[0])
-            if langid.classify(title_text)[0] == langid.classify(description_text)[0] and langid.classify(title_text)[0]  == "en":
-                print(title_text)
-                print(description_text)
-                print(link)
-                number_of_all += 1
-                f.write(link + "\n")
-                print()
-                print()
+            # if langid.classify(title_text)[0] == langid.classify(description_text)[0] and langid.classify(title_text)[0]  == "en":
+            #     print(title_text)
+            #     print(description_text)
+            #     print(link)
+            #     number_of_all += 1
+            f.write(link + "\n")
+            #     print()
+            #     print()
         driver.find_element("class name","next-button").click()
         driver.find_element("xpath","/html/body")
         
@@ -117,7 +115,7 @@ while int(i) < (89174):
         print(full_time_text)
         print(number_of_all)
         print(not_loaded)
-        i_number = open(r'C:\Users\Анатолий\Desktop\python\i.txt', 'w')
+        i_number = open('current.txt', 'w')
         i += 1
         not_loaded+= 1
         i_number.write(str(i))
