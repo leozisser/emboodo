@@ -6,8 +6,10 @@ from datasets_custom_description import *
 
 filepath = '/Users/leo_z/Downloads/Datahunters Working station - datahunter - datarade full scrape - scraping.csv'
 fp2 = '/Users/leo_z/Downloads/Datahunters Working station - removed_links.csv'
-
-
+eurostat = '/Users/leo_z/Downloads/Scraping-data-europe - Eurostat.csv'
+demographic = '/Users/leo_z/Downloads/Scraping-data-europe - Demographic Datasets.csv'
+data_gov_lt = '/Users/leo_z/Downloads/Scraping-data-europe - data.gov.lt.csv'
+instituto_nacional = '/Users/leo_z/Downloads/Scraping-data-europe - Instituto Nacional de Estadistica.csv'
 def checked_for_existence(list_, d):
     new_list = []
     for i in list_:
@@ -48,11 +50,12 @@ def unique_entries(column):
 
 def form_list_of_datasets(fp, exitname):
     df = pd.read_csv(fp).fillna('')
-    df['use_case'] = insert_comma(df['use_case'])
-    df['use_case'] = df['use_case'].apply(check_cases)
-    df['data_category']= insert_comma(df['data_category'])
-    df['data_category'] = df['data_category'].apply(check_cat)
-    df.to_csv('results/' + exitname + '.csv', index=False)
+    df['Use cases'] = insert_comma(df['Use cases'])
+    df['Use cases'] = df['Use cases'].apply(check_cases)
+    df['Data Categories']= insert_comma(df['Data Categories'])
+    df['Data Categories'] = df['Data Categories'].apply(check_cat)
+    df_new = form_description(df)
+    df_new.to_csv('results/' + exitname + '.csv', index=False)
 
 def form_list_of_providers(filepath, exit_name):
     print('lol')
@@ -92,15 +95,6 @@ def form_list_of_providers(filepath, exit_name):
     return 0
 
 
-# print(len(df))
-# df = df.drop_duplicates()
-# df['use_case'] = df['use_case'].replace('none found','')
-# df['data_category'] = df['data_category'].replace('none found','')
-# df['related_data_sets'] = df['related_data_sets'].replace('none found','').replace(',,',',')
-# print(len(df))
-# df.to_csv('datarade_datasets_df.csv')
 
 
-# text = re.sub(r'http\S+', '', text)
-# print(categories)
-form_list_of_datasets(fp2, 'lol')
+form_list_of_datasets(data_gov_lt, 'Instituto_Nacional_de_Estadistica')
