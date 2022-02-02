@@ -48,54 +48,44 @@ def check_exists(driver,way,name):
         return False
     return True
 i = 0
-i_number = open(r'C:\Users\Анатолий\Desktop\python\i.txt', 'r')
+i_number = open(r'C:\Users\Анатолий\Desktop\python\i_2.txt', 'r')
 for lines in i_number:
     i = int(lines)
 print(i)
 driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe", chrome_options=options
 )
 #i = 12033 + 563 + 1130 + 500 + 966 +1087 + 81 + 5 + 10 + 13
-driver.get("https://data.europa.eu/data/datasets?locale=en&page="+str(i)+"")
+driver.get("https://catalog.data.gov/dataset?page="+str(i)+"")
 driver.maximize_window()
-f = open(r'C:\Users\Анатолий\Desktop\python\scraping data europa eu.txt', 'a')
+f = open(r'C:\Users\Анатолий\Desktop\python\scraping data gov.txt', 'a')
 
 number_of_all = 0
 not_loaded = 0
 avg_time_for_all = []
 
 while int(i) < (89174):
-    
+    driver.get("https://catalog.data.gov/dataset?page="+str(i)+"")
     start_time = time.time()
-    driver.delete_all_cookies()
-    check_if_page_loaded = check_exists(driver,"class name","alert")
+    check_if_page_loaded = check_exists(driver,"class name","dataset-content")
     time.sleep(0.2)
-    if check_if_page_loaded == True and driver.find_element("class name","alert").text.find("datasets ") != -1:
+    if check_if_page_loaded == True:
         
         #print(driver.find_element("class name","alert").text.find("datasets "))
-        data_set_boxes = driver.find_elements("class name","data-info-box")
+        data_set_boxes = driver.find_elements("class name","dataset-content")
         
         for one_data_set in data_set_boxes :
-            try:
-                title_text = (one_data_set.find_element("class name","card-header").text)
-            except:
-                title_text = "Аааааааааааа"
-            try:
-                description_text = (one_data_set.find_element("class name","card-text").text)
-            except Exception:
-                description_text = "Аааааааааа"
             
-            link = one_data_set.find_element("class name","text-dark").get_attribute("href")
+            
+            middle_element = one_data_set.find_element("class name","dataset-heading")
+            link = middle_element.find_element("tag name","a").get_attribute("href")
+            title_text = middle_element.find_element("tag name","a").text
             #print((langid.classify(title_text))[0])
-            if langid.classify(title_text)[0] == langid.classify(description_text)[0] and langid.classify(title_text)[0]  == "en":
-                print(title_text)
-                print(description_text)
-                print(link)
-                number_of_all += 1
-                f.write(link + "\n")
-                print()
-                print()
-        driver.find_element("class name","next-button").click()
-        driver.find_element("xpath","/html/body")
+            print(title_text)
+            #print(description_text)
+            print(link)
+            number_of_all += 1
+            f.write(link + "\n")
+        
         
         os.system('CLS')
         print(i)
@@ -117,7 +107,7 @@ while int(i) < (89174):
         print(full_time_text)
         print(number_of_all)
         print(not_loaded)
-        i_number = open(r'C:\Users\Анатолий\Desktop\python\i.txt', 'w')
+        i_number = open(r'C:\Users\Анатолий\Desktop\python\i_2.txt', 'w')
         i += 1
         not_loaded+= 1
         i_number.write(str(i))
