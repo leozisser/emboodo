@@ -177,7 +177,6 @@ def table_row_datasets(row,driver):
 
 
 def handle_table(df, batch_size, start,mode):
-    lol()
     driver = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver')
     driver2 = webdriver.Chrome('/Users/leo_z/Documents/GitHub/emboodo/chromedriver',chrome_options=chrome_options)
     # print(df)
