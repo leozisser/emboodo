@@ -48,23 +48,33 @@ def add_deleted_name(df): #returns df with new column where data vendor name is 
     return df
 
 
-def cond(s1:str,s2:str): '''returns concatenated strings if first string is not empty else returns empty string'''
-    if s2 != '':
-        return s2+s2
-    else:
-        return ''
+def cond(a):
+    # print(a)
+    # print((len(a)>0)**2)
+    return (len(a)>0)**2
 
 
-def form_description(df): #creates a description based on a template in a separate column
+def last(s):
+    return s.split('.')[-1].lower()
+
+def replace_api(col):
+    return col.str.replace(r'\(API.+\)', '', regex=True)
+
+
+def form_description(df): #creates a description based on a template in a separate column, removes 'unnamed:' columns
     # df = pd.read_csv(path).fillna('')
     df = add_deleted_name(df)
     print(df.columns)
+    descr = df['Description']
+    df['Last Sentence'] = descr.apply(last)
+    ls = df['Last Sentence']
     dataname = df['Name of the dataset']
     vendor_name = df['Data Vendor Name']
     datacat = df['Data Categories']
     usecases = df['Use cases']
-    dataname_replaced = df['replaced']
-    df['Description_new'] = vendor_name + '\'s dataset - \'' + dataname_replaced +cond( '\' provides ', datacat.apply(insert_last_and)) + cond(' that can be used in ', usecases.apply(insert_last_and)) + '.'# + ' in the '+location
+    dataname_replaced = replace_api(df['replaced']).apply(lambda x:x.strip(' ').strip('.'))
+    # dataname_replaced = dataname_replaced.str.replace(r'\(API.+\)', '', regex=True)
+    df['Description_new'] = vendor_name + '\'s dataset - \'' + dataname_replaced + '\' ' +( 'provides '+ datacat.apply(insert_last_and))*datacat.apply(cond) + (' that can be used in ' + usecases.apply(insert_last_and))*usecases.apply(cond) + '.'# + ' based on ' + ls + '.' #+  'in the '+location
     df = df.drop('replaced',axis=1)
     df = df.drop([c for c in df.columns if 'Unnamed' in c],axis=1)
     # df.to_csv('df with description-2.csv', index=False)

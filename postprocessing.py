@@ -97,4 +97,4 @@ def form_list_of_providers(filepath, exit_name):
 
 
 
-form_list_of_datasets(data_gov_lt, 'Instituto_Nacional_de_Estadistica')
+form_list_of_datasets(data_gov_lt, 'data.gov.lt')
