@@ -216,5 +216,6 @@ def scrape_sheet(sheet, mode='datasets'):
         df_new.to_csv('newdf.csv',mode='a',header=hdr,index = False)
         with open("current.txt", "w") as text_file:
             text_file.write(str(n0))
-
+            
+            
 # scrape_sheet(datasets_df)
