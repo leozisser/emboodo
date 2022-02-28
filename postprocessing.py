@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from parse_datarade import categories, cases
+from scraping.parse_datarade import categories, cases
 from datasets_custom_description import *
 
 
