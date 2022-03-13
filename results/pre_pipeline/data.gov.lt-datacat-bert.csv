@@ -1,0 +1,256 @@
+,id,Title,data_categories
+0,0,List of companies licensed to produce beer,"Demographic Data,B2B Data,Cross-Device Identity Data"
+1,1,List of companies licensed to produce alcoholic products,"Demographic Data,Traffic and Routing Data,B2B Data,Customer Transaction Data,Cross-Device Identity Data"
+2,2,List of companies holding licenses for the production of alcoholic products,"Demographic Data,Cross-Device Identity Data"
+3,3,Other classifications of JAR attributes,Cross-Device Identity Data
+4,4,Open design data of the Republic of Lithuania,Cross-Device Identity Data
+5,5,"Legal entities, more than 60 d. late submission of financial statements for the previous financial year","Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+6,6,Financial statement documents submitted by legal entities - profit (loss) statements,"Traffic and Routing Data,Cross-Device Identity Data"
+7,7,Data on participants in legal entities by country of legal entity participants and legal form,"B2B Data,Cross-Device Identity Data"
+8,8,Data on participants of legal entities on foreign natural and legal persons,"B2B Data,Cross-Device Identity Data"
+9,9,Data of participants in legal entities from JADIS,"B2B Data,Cross-Device Identity Data"
+10,10,Data on lists of participants in legal entities,"B2B Data,Cross-Device Identity Data"
+11,11,Data of participants of legal entities according to the legal form of the legal entity,"Demographic Data,Cross-Device Identity Data"
+12,12,Data of state and / or municipal legal entities,"B2B Data,Cross-Device Identity Data"
+13,13,JAR fact type and subtype classifiers,"B2B Data,Cross-Device Identity Data"
+14,14,Classifications of JAR legal forms and statuses,"Demographic Data,Cross-Device Identity Data"
+15,15,JAR non-legal entity classification,"B2B Data,Cross-Device Identity Data"
+16,16,JAR registered non-governmental organizations (under the heading &quot;NON-GOVERNMENTAL ORGANIZATIONS&quot;),Cross-Device Identity Data
+17,17,Non-governmental organizations deregistered in the JAR (under the heading &quot;Non-governmental organizations&quot;),Cross-Device Identity Data
+18,18,Beneficiaries deregistered in the JAR (according to the deregistered status &quot;BENEFICIARIES&quot;),"Demographic Data,Cross-Device Identity Data"
+19,19,JAR registered beneficiaries (according to the registered status &quot;BENEFICIARIES&quot;,"Traffic and Routing Data,Cross-Device Identity Data"
+20,20,Legal entities are registered in the Register of Legal Entities of the Republic of Lithuania,"Demographic Data,Cross-Device Identity Data"
+21,21,Legal entities have been deregistered from the Register of Legal Entities,Cross-Device Identity Data
+22,22,Data on registered offices (addresses) of legal persons registered in the Register of Legal Entities (RAW date),"Demographic Data,Cross-Device Identity Data"
+23,23,Documents of legal entities registered in the Register of Legal Entities submitted to the Registrar (RAW date),"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+24,24,Authorized capital data of legal entities,"B2B Data,Cross-Device Identity Data"
+25,25,"Management bodies of legal entities registered in the Register of Legal Entities, their forms (RAW date)","Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+26,26,Creation and / or development of traditional craft centers. general information,Cross-Device Identity Data
+27,27,List of qualified trust service providers established in the Republic of Lithuania and qualified trust services provided by them,"Demographic Data,Cross-Device Identity Data"
+28,28,Food information system,"Demographic Data,Tourism Data"
+29,29,List of real estate,"B2B Data,Cross-Device Identity Data"
+30,30,LIST OF MUNICIPAL REAL ESTATE AND OTHER IMMOVABLE PROPERTY FOR SALE AT A PUBLIC AUCTION,Cross-Device Identity Data
+31,31,LIST OF NON-RESIDENTIAL PREMISES FOR RENT BY THE MUNICIPAL ADMINISTRATION,"B2B Data,Cross-Device Identity Data"
+32,32,Wholesale and retail trade of alcoholic and tobacco products of economic entities Annual planned inspection plans,Cross-Device Identity Data
+33,33,Domestic sales of some dairy products produced in Lithuanian dairy processing companies,"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+34,34,Open data of trademarks of the Republic of Lithuania,"Demographic Data,Cross-Device Identity Data"
+35,35,List of religious communities and associations,"B2B Data,Cross-Device Identity Data"
+36,36,Bibliographic database of Lithuanian standards and other standardisation deliverables,Cross-Device Identity Data
+37,37,Standard terms database,"Tourism Data,B2B Data,Cross-Device Identity Data"
+38,38,List of valuers and valuation companies,"Demographic Data,Cross-Device Identity Data"
+39,39,Distribution of sheep and goat keepers yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+40,40,Data set for inaccuracies in abandoned agricultural land data,Cross-Device Identity Data
+41,41,Sowing data of areas sprayed with plant protection products and plant seeds treated with plant protection products,"Demographic Data,B2B Data,Cross-Device Identity Data"
+42,42,Distribution of heifers and cows of meat and crossbred breeds by age groups yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+43,43,Distribution of cattle by municipalities yyyy-mm-dd (z. B. And other enterprises),"Demographic Data,Cross-Device Identity Data"
+44,44,"Number of keepers, herds and storage places yyyy-mm-dd","B2B Data,Cross-Device Identity Data"
+45,45,Distribution of farms according to the number of dairy cows in Lithuania yyyy-mm-dd,"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+46,46,Number of herds and livestock registered yyyy-mm-dd,"B2B Data,Cross-Device Identity Data"
+47,47,Distribution of ewe and goat keepers yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+48,48,"Declines in cattle, sheep, goats and horses yyyy-mm-dd - yyyy-mm-dd","Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+49,49,Distribution of cattle by sex and age groups yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+50,50,Distribution of horses by municipality yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+51,51,Distribution of cattle by municipality yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+52,52,"Slaughter of bovine animals from yyyy-mm-dd to yyyy-mm-dd (slaughterhouses, own-account and compulsory)","Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+53,53,Distribution of sheep and goats by sex yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+54,54,Farm animals in herds and numbers yyyy-mm-dd,Cross-Device Identity Data
+55,55,Distribution of farms by number of sheep in Lithuania yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+56,56,Distribution of farms by number of cattle in Lithuania yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+57,57,Distribution of cows and heifers by breeds yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+58,58,Distribution of cattle by breeds yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+59,59,Number of pig herds and pigs by pig farm size yyyy-mm-dd,Cross-Device Identity Data
+60,60,Distribution of pure-bred beef cattle and cross-bred beef cattle by breed yyyy-mm-dd,"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+61,61,Data on eradication of bovine animals from yyyy-mm-dd to yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+62,62,Number of livestock births yyyy-mm-dd-yyyy-mm-dd,"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+63,63,Distribution of farms by number of goats in Lithuania yyyy-mm-dd,"Demographic Data,Cross-Device Identity Data"
+64,64,"Slaughter of bovine, ovine, caprine, porcine and equine animals in slaughterhouses from yyyy-mm-dd to yyyy-mm-dd","Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+65,65,Number of pig keepers and pigs by pig farm size yyyy-mm-dd,"Traffic and Routing Data,Cross-Device Identity Data"
+66,66,Data set of pre-description descriptions of boundaries of control control plots of land (LFS),"Demographic Data,Cross-Device Identity Data"
+67,67,Annual summary of the the introduction of fish and crayfish,"Demographic Data,Cross-Device Identity Data"
+68,68,Companies that have not submitted financial statements,Cross-Device Identity Data
+69,69,Legal entities without an auditor&#39;s report,"Demographic Data,B2B Data,Cross-Device Identity Data"
+70,70,Classifications of JAR documents,"Tourism Data,Cross-Device Identity Data"
+71,71,Name of the dataset,Cross-Device Identity Data
+72,72,List of professional accountants,"Demographic Data,B2B Data,Cross-Device Identity Data"
+73,73,"Data on fines imposed and paid, administrative misconduct cases","B2B Data,Cross-Device Identity Data"
+74,74,Statistics on administrative offenses recorded in accordance with the procedure established by the Code of Administrative Offenses,"Demographic Data,Cross-Device Identity Data"
+75,75,Performance evaluation,"Demographic Data,Tourism Data,Cross-Device Identity Data"
+76,76,Results of the public audit,"Demographic Data,B2B Data,Cross-Device Identity Data"
+77,77,Data of the annual activity plan of the State Audit Office,Cross-Device Identity Data
+78,78,Results of the European Union investment audit,"Demographic Data,B2B Data,Cross-Device Identity Data"
+79,79,Implementation of public audit recommendations,"B2B Data,Cross-Device Identity Data"
+80,80,Results of State Audit Office assessments,"B2B Data,Cross-Device Identity Data"
+81,81,Report on the implementation of the budget,"Demographic Data,B2B Data,Cross-Device Identity Data"
+82,82,Results of evaluations of the monitoring of budgetary policies,"Demographic Data,Cross-Device Identity Data"
+83,83,Data on the reports on the implementation of the budget of the State Audit Office,"Demographic Data,Cross-Device Identity Data"
+84,84,Report on completed purchases via CPO LT el. catalog in 2021 Q I,Cross-Device Identity Data
+85,85,Report on completed purchases via CPO LT el. catalog in 2021 Q II,Cross-Device Identity Data
+86,86,Statistical survey of wage structure,"Demographic Data,Cross-Device Identity Data"
+87,87,Average monthly salary of employees of the Ministry of Foreign Affairs of the Republic of Lithuania,"Demographic Data,Cross-Device Identity Data"
+88,88,Income,"Tourism Data,Cross-Device Identity Data"
+89,89,Assignment of funds (grants) to municipalities due to the functions delegated by the state in the areas of supervision of the Ministry of Justice,"Demographic Data,Cross-Device Identity Data"
+90,90,Statistics on the attestation of professional experience of nationals traveling to other Member States,Cross-Device Identity Data
+91,91,Statement of financial position,Cross-Device Identity Data
+92,92,Data on the financial condition of the State Audit Office,"Demographic Data,B2B Data,Cross-Device Identity Data"
+93,93,"The most popular boy names in Lithuania, TOP 20 (boy's name, year of birth, number of names)","Demographic Data,Cross-Device Identity Data"
+94,94,"The most popular men's names in Lithuania since 1900, TOP 50",Cross-Device Identity Data
+95,95,"The most popular names of girls in Lithuania, TOP 20 (girl&#39;s name, year of birth, number of names)","Demographic Data,Cross-Device Identity Data"
+96,96,"The most popular women's names in Lithuania since 1900, TOP 50","Demographic Data,Cross-Device Identity Data"
+97,97,Income tax,"Demographic Data,Tourism Data,Traffic and Routing Data,Cross-Device Identity Data"
+98,98,Expenditure incurred by the population,Cross-Device Identity Data
+99,99,Data on assets transferred to the state,"Demographic Data,B2B Data,Cross-Device Identity Data"
+100,100,7. List of adjustment codes of the units of measurement used in declaring goods to the Lithuanian Customs,"Demographic Data,Cross-Device Identity Data"
+101,101,6. List of units of measurement used in declaring goods to the Customs of the Republic of Lithuania,"Demographic Data,Cross-Device Identity Data"
+102,102,Amount of taxes paid by the legal entity,Cross-Device Identity Data
+103,103,Taxpayer statistics,"Tourism Data,Traffic and Routing Data,B2B Data,Cross-Device Identity Data"
+104,104,1. List of customs offices,"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+105,105,2. List of functions performed by customs offices,"Demographic Data,Cross-Device Identity Data"
+106,106,3. List of warehouses supervised by customs and other public authorities,"Traffic and Routing Data,Cross-Device Identity Data"
+107,107,Statistical survey of annual household budgets,"Demographic Data,B2B Data,Cross-Device Identity Data"
+108,108,State aid to foreign investors,"Tourism Data,B2B Data,Cross-Device Identity Data"
+109,109,Data on beneficiaries and political parties,"B2B Data,Cross-Device Identity Data"
+110,110,"8. List of the relationship between product codes, units of measurement and their adjuster codes","Demographic Data,B2B Data,Cross-Device Identity Data"
+111,111,Data from the assessment of the progress of the supervisory authorities,Cross-Device Identity Data
+112,112,List of major projects,"B2B Data,Cross-Device Identity Data"
+113,113,VAT declarations (FR0600),"B2B Data,Cross-Device Identity Data"
+114,114,4. List of warehouse types.,"Demographic Data,B2B Data,Cross-Device Identity Data"
+115,115,Municipal debt and what part of the debt is a loan,"Demographic Data,Cross-Device Identity Data"
+116,116,"Information on controlled, associated and other entities","B2B Data,Cross-Device Identity Data"
+117,117,Subsidies for victims of COVID-19,"Demographic Data,Traffic and Routing Data,B2B Data,Cross-Device Identity Data"
+118,118,Carrying amount of assets used under finance leases,"B2B Data,Cross-Device Identity Data"
+119,119,Carrying amount of leased and transferred assets,Cross-Device Identity Data
+120,120,Information on some short - term amounts due,"B2B Data,Cross-Device Identity Data"
+121,121,Loans received and non-equity securities issued by repayment and redemption periods on the last day of the reporting period,Cross-Device Identity Data
+122,122,Liabilities of the financial lease recipient by periods,Cross-Device Identity Data
+123,123,Amounts of taxes according to the individual tax on a net basis,Cross-Device Identity Data
+124,124,Loan maturities and interest rates,"B2B Data,Cross-Device Identity Data"
+125,125,Loan guarantees provided,"Demographic Data,Tourism Data,B2B Data,Cross-Device Identity Data"
+126,126,Value of inventories by groups,Cross-Device Identity Data
+127,127,Long - term finance lease liabilities and their current year share,Cross-Device Identity Data
+128,128,Information on investments in non - current financial assets,Cross-Device Identity Data
+129,129,"The value of assets received under loan agreements, specified in the agreement by asset groups on the last day of the reporting period","Demographic Data,Cross-Device Identity Data"
+130,130,"Change in the carrying amount of property, plant and equipment",Cross-Device Identity Data
+131,131,Financial reporting period information by operating segments,Cross-Device Identity Data
+132,132,Amounts receivable at one time,"B2B Data,Cross-Device Identity Data"
+133,133,Prepayment information,Cross-Device Identity Data
+134,134,Change in liabilities recorded at amortized cost during the reporting period,Cross-Device Identity Data
+135,135,Changes in held - for - sale financial assets,"Demographic Data,Traffic and Routing Data,B2B Data,Cross-Device Identity Data"
+136,136,Statistics on equating the professional experience of foreign nationals with a higher education qualification,"Demographic Data,B2B Data,Cross-Device Identity Data"
+137,137,10. List of currencies used to declare goods to the Lithuanian Customs,"Demographic Data,Cross-Device Identity Data"
+138,138,9. List of exchange rates used in customs,"Demographic Data,Cross-Device Identity Data"
+139,139,Performance report,"Demographic Data,Tourism Data,Cross-Device Identity Data"
+140,140,Performance results of the State Audit Office,"Demographic Data,B2B Data,Cross-Device Identity Data"
+141,141,Public procurement contracts,"Demographic Data,Tourism Data,Cross-Device Identity Data"
+142,142,Data on land plots subject to land tax,Cross-Device Identity Data
+143,143,Number of first-year and enrolled students admitted to higher education institutions by programs,Cross-Device Identity Data
+144,144,Statistics of Lithuanian Libraries,"Tourism Data,Cross-Device Identity Data"
+145,145,Register of Cultural Property,"Tourism Data,Cross-Device Identity Data"
+146,146,Lithuanian Publishers,"Tourism Data,B2B Data,Cross-Device Identity Data"
+147,147,"Data on registration, deregistration or data modification of religious communities and associations",Cross-Device Identity Data
+148,148,Statistical survey of adult education,"Demographic Data,Cross-Device Identity Data"
+149,149,Data on the use of dormitories managed by higher education institutions,"B2B Data,Cross-Device Identity Data"
+150,150,Educational institutions,"Tourism Data,B2B Data,Cross-Device Identity Data"
+151,151,Electricity consumption in Lithuania,Cross-Device Identity Data
+152,152,Hourly data on electricity supplied and consumed by generating customers are aggregated by region,"B2B Data,Cross-Device Identity Data"
+153,153,Textual data set of historical (deleted) settlements of the Address Register,Cross-Device Identity Data
+154,154,Spatial data of the addresses allocated to land parcels and buildings from the Address Register,"Demographic Data,Cross-Device Identity Data"
+155,155,Address register street text data set,"B2B Data,Cross-Device Identity Data"
+156,156,Spatial data of the counties from the Address Register,"Demographic Data,Cross-Device Identity Data"
+157,157,Spatial data of historical (annulled) residential areas from the Address Register,"Demographic Data,Cross-Device Identity Data"
+158,158,Textual data set of residential areas of the Address Register,Cross-Device Identity Data
+159,159,Spatial data of residential areas from the Address Register,"Demographic Data,B2B Data,Cross-Device Identity Data"
+160,160,Address register municipal textual data set,"B2B Data,Cross-Device Identity Data"
+161,161,Spatial data of municipalities from the Address Register,"Demographic Data,Cross-Device Identity Data"
+162,162,Textual data set of address register elderships,"Traffic and Routing Data,B2B Data,Cross-Device Identity Data"
+163,163,Spatial data of wards from the Address Register,"Demographic Data,Cross-Device Identity Data"
+164,164,Address register county text data set,"B2B Data,Cross-Device Identity Data"
+165,165,Textual data of the addresses allocated to land parcels and buildings from the Address Register,"Demographic Data,Cross-Device Identity Data"
+166,166,Textual data describing the addresses of residential and non-residential premises from the Address Register,"Demographic Data,Cross-Device Identity Data"
+167,167,Spatial data of centrelines of historical (annulled) streets from the Address Register,"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+168,168,Address data set for historical streets,"B2B Data,Cross-Device Identity Data"
+169,169,Spatial data of street centrelines from the Address Register,"Demographic Data,Cross-Device Identity Data"
+170,170,Quantities of valid objects in the address register at the beginning of the month,"Demographic Data,Cross-Device Identity Data"
+171,171,Number of changed Address Register objects per month,"B2B Data,Cross-Device Identity Data"
+172,172,List of changes in the spatial data of address points during the month,"Demographic Data,Cross-Device Identity Data"
+173,173,Number of deregistered Address Register objects per month,Cross-Device Identity Data
+174,174,List of changes in the spatial data of residential areas during the month,"Demographic Data,Cross-Device Identity Data"
+175,175,Number of newly registered Address Register objects per month,"Demographic Data,B2B Data,Cross-Device Identity Data"
+176,176,Klaipeda apartment houses,"Demographic Data,B2B Data,Cross-Device Identity Data"
+177,177,Data on qualification certificates of energy performance certification of buildings,"Demographic Data,Cross-Device Identity Data"
+178,178,List of suppliers of forest reproductive material,"Demographic Data,Cross-Device Identity Data"
+179,179,Data of project proposals,"Tourism Data,B2B Data,Cross-Device Identity Data"
+180,180,Data on administrative services,"B2B Data,Cross-Device Identity Data"
+181,181,"Number of voters in constituencies, municipalities, districts (spatial data of electoral territories)",Cross-Device Identity Data
+182,182,Voters arrived to vote by age group and gender,"B2B Data,Cross-Device Identity Data"
+183,183,Candidate ranking data provided in ballot papers,"Demographic Data,B2B Data,Cross-Device Identity Data"
+184,184,Incentives and awards for employees of the State Audit Office,"B2B Data,Cross-Device Identity Data"
+185,185,Details of the positions specified in Article 53 of the Law on Civil Service,"Demographic Data,Cross-Device Identity Data"
+186,186,Election results in a multi-member constituency (since 1992) (votes on lists of candidates),"Demographic Data,Cross-Device Identity Data"
+187,187,"Population register data on the age, citizenship and sex of the Lithuanian population by municipalities",Cross-Device Identity Data
+188,188,Classification of types of civil status acts entries in the Population Register,"Demographic Data,Cross-Device Identity Data"
+189,189,Classification of Nationalities in the Population Register,Cross-Device Identity Data
+190,190,"Population register data on the marital status of the population, number of children in municipalities",Cross-Device Identity Data
+191,191,"Data from the political campaign financing sheet (income and expenditure, debt obligations)","Demographic Data,Cross-Device Identity Data"
+192,192,Statistics on the use of IT services,"B2B Data,Cross-Device Identity Data"
+193,193,Advertising report of political campaign participants,"Demographic Data,Cross-Device Identity Data"
+194,194,"Candidates, list of candidates support statistics","B2B Data,Cross-Device Identity Data"
+195,195,Election results in single-member constituencies (since 1992) (votes cast),"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+196,196,Election results in a multi-member constituency (since 1992) (priority votes received by candidates),"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+197,197,PERMITS issued by state institutions to economic entities,Cross-Device Identity Data
+198,198,CERTIFICATES issued by public authorities to economic operators,Cross-Device Identity Data
+199,199,LICENSES issued to economic entities by state institutions,"Demographic Data,Cross-Device Identity Data"
+200,200,Other LICENSING DOCUMENTS issued to economic entities of state institutions,Cross-Device Identity Data
+201,201,"List of liquidated companies, enterprises and institutions whose personnel management documents are kept in the archives of Alytus City Municipality",Cross-Device Identity Data
+202,202,STI data of accounting of taxes and other contributions to budgets (form 1-VP),"Demographic Data,Cross-Device Identity Data"
+203,203,Tax statistics of members received by a political party,Cross-Device Identity Data
+204,204,Data of political parties of the Republic of Lithuania,"Demographic Data,Cross-Device Identity Data"
+205,205,Data on the number of members of political parties,"Demographic Data,Cross-Device Identity Data"
+206,206,"Data on members of political parties on gender, age, citizenship, geographical location and membership",Cross-Device Identity Data
+207,207,"Data on registration, deregistration or change of data of political parties","Demographic Data,Cross-Device Identity Data"
+208,208,"Details of candidates for positions in the public service, for positions in public sector organizations specified in the list of positions for which the competition is being organized","Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+209,209,Base prices for drinking water supply and wastewater treatment services,"Demographic Data,Cross-Device Identity Data"
+210,210,Average salary of the employees of the State Audit Office,"Demographic Data,Cross-Device Identity Data"
+211,211,Scheduled inspections of evaluation,"Demographic Data,Tourism Data,Cross-Device Identity Data"
+212,212,Data of public administration entities,"B2B Data,Cross-Device Identity Data"
+213,213,List of public services provided by Klaipeda City Municipality Administration,Cross-Device Identity Data
+214,214,List of administrative services provided by Visaginas Municipality Administration,Cross-Device Identity Data
+215,215,Medical interventions performed in the context of inpatient treatment or the provision of day surgery services,"Demographic Data,Cross-Device Identity Data"
+216,216,Amounts paid (in points) for outpatient treatment,"Demographic Data,Cross-Device Identity Data"
+217,217,COVID-19 data,"Demographic Data,B2B Data,Cross-Device Identity Data"
+218,218,DRG list,"Demographic Data,Traffic and Routing Data,Cross-Device Identity Data"
+219,219,"List of medical institutions, pharmacies and other companies",Cross-Device Identity Data
+220,220,Adults health behaviour,"Tourism Data,B2B Data,Customer Transaction Data,Cross-Device Identity Data"
+221,221,List of Medical Interventions (ACHI),"B2B Data,Cross-Device Identity Data"
+222,222,List of diseases (ICD-10-AM),"Traffic and Routing Data,B2B Data,Cross-Device Identity Data"
+223,223,"Data on death cases and their causes of residents of Lithuania, who died in Lithuania and abroad",Cross-Device Identity Data
+224,224,List of services,"Demographic Data,Tourism Data,Cross-Device Identity Data"
+225,225,"Amounts paid (in points) for inpatient long-term, rehabilitative treatment, expensive examinations and procedures performed during them and inpatient transplantation services provided","Demographic Data,Cross-Device Identity Data"
+226,226,Amounts paid (in points) for inpatient active treatment and day surgery services,"Demographic Data,Cross-Device Identity Data"
+227,227,Population Health Statistical Survey,"Tourism Data,Cross-Device Identity Data"
+228,228,Data on licences of health care institutions,"Demographic Data,B2B Data,Cross-Device Identity Data"
+229,229,Data of the Consular Information Department of the Consular Department of the Ministry of Foreign Affairs for Travelers and Residents Abroad www.keliauk.urm.lt,"Demographic Data,Cross-Device Identity Data"
+230,230,Data of the Lithuanian Development Cooperation Website (https://orangeprojects.lt),Cross-Device Identity Data
+231,231,Data on road traffic offenses,"B2B Data,Cross-Device Identity Data"
+232,232,Data on the implementation and monitoring of the strategic action plan,Cross-Device Identity Data
+233,233,"Data on economic sanctions imposed on economic operators for violations of the Law on Alcohol Control and the Law on Control of Tobacco, Tobacco Products and Related Products",Cross-Device Identity Data
+234,234,Legislation in the field of auditing,"Demographic Data,B2B Data,Cross-Device Identity Data"
+235,235,Data on international legal cooperation with foreign countries,"B2B Data,Cross-Device Identity Data"
+236,236,Legislation in the field of evaluation,"Demographic Data,Cross-Device Identity Data"
+237,237,Administrative Offenses Protocols ANP (ATPP),"Demographic Data,B2B Data,Cross-Device Identity Data"
+238,238,Apartment house administrators,"Demographic Data,Tourism Data,B2B Data,Cross-Device Identity Data"
+239,239,The boundaries of territorial planning documents have been approved since 2015.,"Demographic Data,B2B Data,Cross-Device Identity Data"
+240,240,The boundaries of spatial planning documents have been approved until 2015.,"Demographic Data,B2B Data,Cross-Device Identity Data"
+241,241,Boundaries of land formation projects,"Demographic Data,B2B Data,Cross-Device Identity Data"
+242,242,Limits of special plans,"Demographic Data,B2B Data,Cross-Device Identity Data"
+243,243,Objects of visibility analysis,"Demographic Data,Cross-Device Identity Data"
+244,244,Data on environmental measures,"B2B Data,Cross-Device Identity Data"
+245,245,Data on road vehicles registered in Lithuania,"Demographic Data,B2B Data,Cross-Device Identity Data"
+246,246,Vehicle traffic data,"Demographic Data,Tourism Data,Cross-Device Identity Data"
+247,247,Results of quality measurements of wireless Internet access services provided in various regions of Lithuania (Railways),"Demographic Data,Cross-Device Identity Data"
+248,248,Results of quality measurements of wireless Internet access services provided in various regions of Lithuania (Cities and roads),"Demographic Data,Cross-Device Identity Data"
+249,249,Data on road works contracts,"B2B Data,Cross-Device Identity Data"
+250,250,Data from several projects,"Tourism Data,B2B Data,Cross-Device Identity Data"
+251,251,Road weather data,"Demographic Data,Tourism Data,B2B Data,Cross-Device Identity Data"
+252,252,Road network data of national and local significance,"B2B Data,Cross-Device Identity Data"
+253,253,Financial data on road asset values and depreciation,"B2B Data,Cross-Device Identity Data"
+254,254,Data on toll road sections,"B2B Data,Cross-Device Identity Data"
